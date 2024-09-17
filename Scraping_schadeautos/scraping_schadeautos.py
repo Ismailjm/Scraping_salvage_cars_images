@@ -75,6 +75,7 @@ lock = threading.Lock()
 def scrape_imgs_links(link):
     # collecting images of each car
     driver.get(link)
+    # randomize the time between each ']][[mn8q1    `
     time.sleep(random.uniform(1, 5))
 
     # select all the images
