@@ -29,6 +29,7 @@ import threading
 # Create a lock
 lock = threading.Lock()
 
+# collect infos about car posts
 def scrape_cars_posts(page):
     url = f'https://www.schadeautos.nl/en/search/damaged/passenger-cars/1/1/0/0/0/0/1/{page}'
     driver.get(url)
