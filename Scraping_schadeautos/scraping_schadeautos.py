@@ -8,10 +8,13 @@ import random
 import pandas as pd
 import concurrent.futures
 import threading
+import concurrent.futures
+import threading
 
 # Number of pages to scrape
 driver = webdriver.Chrome()
 
+# the url of the website we scraping from
 url = 'https://www.schadeautos.nl/en/search/damaged/passenger-cars/1/1/0/0/0/0/1/0'
 driver.get(url)
 # Get the maximum number of pages
@@ -22,9 +25,6 @@ max_page = int(max_page.split("/")[-1])
 car_posts = []
 i = 1
 car_data = []
-
-import concurrent.futures
-import threading
 
 # Create a lock
 lock = threading.Lock()
